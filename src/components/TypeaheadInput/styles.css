@@ -1,0 +1,94 @@
+.TypeaheadInput {
+  position: relative;
+  margin: 20px auto;
+  min-width: 200px;
+  max-width: 500px;
+  width: 40%;
+}
+
+.TypeaheadInput input {
+  background: #fff9f8;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #777;
+  outline: none;
+  box-shadow: 0px 3px 9px 0px rgba(0,0,0,0.3);
+  font-size: 2.5rem;
+  color: #777;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  transition-property: border-color, color, box-shadow;
+  will-change: border-color, color, box-shadow;
+}
+
+.TypeaheadInput input:focus {
+  color: #333;
+  border-color: #333;
+  box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.4);
+}
+
+.TypeaheadInput .spinner {
+  position: absolute;
+  top: 2.5rem;
+  right: 5px;
+  transform: translateY(-50%);
+}
+
+.TypeaheadInput .spinner {
+  width: 70px;
+}
+
+@keyframes bouncedelay-anim {
+  0%, 80%, 100% {
+    transform: scale(0);
+  } 40% {
+    transform: scale(1.0);
+  }
+}
+
+.TypeaheadInput .spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #ffa89a;
+  border-radius: 100%;
+  display: inline-block;
+  animation: bouncedelay-anim 1.4s infinite ease-in-out both;
+}
+
+.TypeaheadInput .spinner .bounce-1 {
+  animation-delay: -0.32s;
+}
+
+.TypeaheadInput .spinner .bounce-2 {
+  animation-delay: -0.16s;
+}
+
+.TypeaheadInput ul {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+  border: 1px solid #777;
+  border-top: 0;
+  box-shadow: 0px 3px 9px 0px rgba(0,0,0,0.3);
+  margin-top: 0;
+  outline: none;
+  background: #fff9f8;
+}
+
+.TypeaheadInput li {
+  padding: 3px 15px;
+  text-align: center;
+  font-size: 2rem;
+  list-style: none;
+  color: #777;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.TypeaheadInput li.highlight {
+  color: #fff;
+  background: #ffa89a;
+}

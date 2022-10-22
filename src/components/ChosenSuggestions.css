@@ -1,0 +1,9 @@
+ul.ChosenSuggestions {
+  padding: 0;
+}
+
+ul.ChosenSuggestions li {
+  list-style: none;
+  padding: 10px;
+  font-size: 1.5rem;
+}
